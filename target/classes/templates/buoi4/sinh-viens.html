@@ -25,7 +25,7 @@
     <option th:each="sv : ${list}" th:text="${sv.ten}" th:value="${sv.mssv}">
     </option>
 </select>
-<button>Add Student</button>
+<button><a href="/sinh-vien/view-add">Add Student</a></button>
 <table border="1">
     <thead>
     <tr>
@@ -53,6 +53,7 @@
         <td th:text="${sv.gioiTinh}"></td>
         <td>
             <a th:href="@{/sinh-vien/remove/{id1}(id1=${sv.mssv})}">Remove</a>
+            <a th:href="@{/sinh-vien/detail/{id1}(id1=${sv.mssv})}">Detail</a>
         </td>
     </tr>
     </tbody>

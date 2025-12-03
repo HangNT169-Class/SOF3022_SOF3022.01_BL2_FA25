@@ -1,5 +1,7 @@
 package com.poly.main.B4_CRUDListFixCung.entity;
 
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -15,13 +17,19 @@ public class SinhVien {
 //    diaChi - String, gioiTinh - boolean
 //    và các constructor, getter, setter
 
+    // message loi default dung cua Spring
+    @NotBlank
     private String mssv;
 
+    @NotBlank(message = "Ten khong duoc trong")
     private String ten;
 
+    @NotBlank(message = "Dia chi khong duoc trong")
     private String diaChi;
 
-    private int tuoi;
+    @NotNull(message = "Tuoi khong duoc trong")
+    // nen doi kieu du lieu thanh kieu Object
+    private Integer tuoi;
 
     private boolean gioiTinh;
 
