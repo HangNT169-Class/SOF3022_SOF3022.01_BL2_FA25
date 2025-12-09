@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table border="1">
+  <thead>
+  <tr>
+    <th>ID</th>
+    <th>P.Code</th>
+    <th>P.Name</th>
+    <th>Price</th>
+    <th>C.Code</th>
+    <th>C.Name</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr th:each="p : ${listPro}">
+    <td th:text="${p.id}"></td>
+    <td th:text="${p.productCode}"></td>
+    <td th:text="${p.productName}"></td>
+    <td th:text="${p.price}"></td>
+    <td th:text="${p.cate2.categoryCode}"></td>
+    <td th:text="${p.cate2.categoryName1}"></td>
+  </tr>
+  </tbody>
+</table>
+</body>
+</html>
